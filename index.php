@@ -11,7 +11,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?=strtoupper($title) ?></title>
+  <title><?=ucwords($title) ?></title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -127,7 +127,9 @@
           if ($_GET['page'] == 'dashboard') {
             include "view/dashboard.php";
           } elseif ($_GET['page'] == 'siswa') {
-            include "view/siswa.php";
+            include "view/siswa/index.php";
+          }elseif($_GET['page'] == 'siswa_create') {
+            include "view/siswa/create.php";
           }
 
         } else {
