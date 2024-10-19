@@ -10,6 +10,7 @@
 
               </div>
           </div>
+          <form action="" method="post">
           <div class="card-body">
 
               <div class="form-group">
@@ -36,5 +37,6 @@
           <div class="card-footer text-right">
               <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Simpan</button>
           </div>
+          </form>
       </div>
       <!-- /.card -->
