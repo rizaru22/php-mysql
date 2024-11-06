@@ -15,7 +15,7 @@
 
               <div class="form-group">
                   <label for="nisn">NISN</label>
-                  <input type="text" class="form-control" id="nisn" name="nisn" placeholder="Masukkan NISN">
+                  <input type="number" class="form-control" id="nisn" name="nisn" placeholder="Masukkan NISN">
               </div>
               <div class="form-group">
                   <label for="nama">Nama Siswa</label>

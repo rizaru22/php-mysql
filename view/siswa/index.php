@@ -20,7 +20,7 @@
                 <div class="col">
                     <?php
                             include "db/koneksi.php";
-                            $query="SELECT nama,nisn,nohp FROM siswa";
+                            $query="SELECT nama,nisn,nohp FROM siswa order by nama";
                             $hasil=mysqli_query($koneksi,$query);
                             
                     ?>
@@ -47,6 +47,8 @@
                                     <a href='index.php?title=siswa&page=siswa_detail&nisn=$data[nisn]' class='btn btn-outline-primary btn-sm'><i class='fas fa-eye'></i> View</a>
 
                                      <a href='index.php?title=siswa&page=siswa_edit&nisn=$data[nisn]' class='btn btn-outline-success btn-sm'><i class='fas fa-edit'></i> Edit</a>
+                                     
+                                     <a href='db/db_siswa.php?action=hapus&nisn=$data[nisn]' class='btn btn-danger btn-sm'><i class='far fa-trash-alt'></i> Hapus</a>
                             </td>
                     </tr>";
                     $no++;
