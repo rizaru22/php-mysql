@@ -10,24 +10,24 @@
 
               </div>
           </div>
-          <form action="" method="post">
+          <form action="db/db_siswa.php?action=create" method="post">
           <div class="card-body">
 
               <div class="form-group">
                   <label for="nisn">NISN</label>
-                  <input type="text" class="form-control" id="nisn" placeholder="Masukkan NISN">
+                  <input type="text" class="form-control" id="nisn" name="nisn" placeholder="Masukkan NISN">
               </div>
               <div class="form-group">
                   <label for="nama">Nama Siswa</label>
-                  <input type="text" class="form-control" id="nama" placeholder="Masukkan nama">
+                  <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan nama">
               </div>
               <div class="form-group">
                   <label for="Alamat">Alamat</label>
-                  <textarea class="form-control" rows="3" id="alamat" placeholder="Masukkan Alamat"></textarea>
+                  <textarea class="form-control" rows="3" id="alamat" name="alamat" placeholder="Masukkan Alamat"></textarea>
               </div>
               <div class="form-group">
                   <label for="nohp">No HP</label>
-                  <input type="email" class="form-control" id="nohp" placeholder="Masukkan nohp">
+                  <input type="text" class="form-control" id="nohp" name="nohp" placeholder="Masukkan nohp">
               </div>
            
 

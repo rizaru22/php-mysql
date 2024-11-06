@@ -18,17 +18,37 @@
               </div>
               <div class="row pt-3">
                 <div class="col">
+                    <?php
+                            include "db/koneksi.php";
+                            $query="SELECT * FROM siswa";
+                            $hasil=mysqli_query($koneksi,$query);
+                            
+                    ?>
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
-                    <th>Rendering engine</th>
-                    <th>Browser</th>
-                    <th>Platform(s)</th>
-                    <th>Engine version</th>
-                    <th>CSS grade</th>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>NISN</th>
+                    <th>Aksi</th>
                   </tr>
                   </thead>
-                  
+                  <tbody>
+                    <?php
+                    $no=1;
+                    while($data=mysqli_fetch_assoc($hasil)){
+                        echo "<tr>
+                            <td>".$no."</td>
+                            <td>".$data['nama']."</td>
+                            <td>".$data['nisn']."</td>
+                            <td>view|update|delete</td>
+                    </tr>";
+                    $no++;
+                    }
+                    
+
+                    ?>
+                  </tbody>
                 </table>
                 </div>
               </div>
