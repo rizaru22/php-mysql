@@ -134,6 +134,8 @@
             include "view/siswa/create.php";
           }elseif($_GET['page']=='siswa_detail'){
             include "view/siswa/detail.php";
+          }elseif($_GET['page']=='siswa_edit'){
+            include "view/siswa/edit.php";
           }
 
         } else {

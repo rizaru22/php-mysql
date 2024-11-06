@@ -20,7 +20,7 @@
                 <div class="col">
                     <?php
                             include "db/koneksi.php";
-                            $query="SELECT nama,nisn FROM siswa";
+                            $query="SELECT nama,nisn,nohp FROM siswa";
                             $hasil=mysqli_query($koneksi,$query);
                             
                     ?>
@@ -30,6 +30,7 @@
                     <th>No</th>
                     <th>Nama</th>
                     <th>NISN</th>
+                    <th>No HP</th>
                     <th>Aksi</th>
                   </tr>
                   </thead>
@@ -41,8 +42,11 @@
                             <td>".$no."</td>
                             <td>".$data['nama']."</td>
                             <td>".$data['nisn']."</td>
+                            <td>".$data['nohp']."</td>
                             <td>
                                     <a href='index.php?title=siswa&page=siswa_detail&nisn=$data[nisn]' class='btn btn-outline-primary btn-sm'><i class='fas fa-eye'></i> View</a>
+
+                                     <a href='index.php?title=siswa&page=siswa_edit&nisn=$data[nisn]' class='btn btn-outline-success btn-sm'><i class='fas fa-edit'></i> Edit</a>
                             </td>
                     </tr>";
                     $no++;
