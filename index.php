@@ -137,8 +137,10 @@ if (isset($_GET['title'])) {
           } elseif ($_GET['page'] == 'siswa_edit') {
             include "view/siswa/edit.php";
           } elseif ($_GET['page'] == 'pegawai_detail') {
-            include "view/pegawai/editdetail.php";
-          } elseif ($_GET['page'] == 'pegawai') {
+            include "view/pegawai/detail.php";
+          }elseif ($_GET['page'] == 'pegawai_edit') {
+            include "view/pegawai/edit.php";
+          }elseif ($_GET['page'] == 'pegawai') {
             include "view/pegawai/index.php";
           }elseif ($_GET['page'] == 'pegawai_create') {
             include "view/pegawai/create.php";
