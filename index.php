@@ -1,9 +1,9 @@
 <?php
-  if(isset($_GET['title'])){
-    $title=$_GET['title'];
-  }else{
-    $title="Aplikasi Perpustakaan";
-  }
+if (isset($_GET['title'])) {
+  $title = $_GET['title'];
+} else {
+  $title = "Aplikasi Perpustakaan";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,14 +11,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?=ucwords($title) ?></title>
+  <title><?= ucwords($title) ?></title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-    <!-- DataTables -->
-    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
 </head>
@@ -79,7 +79,7 @@
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item">
-              <a href="index.php?page=dashboard&title=dashboard" class="nav-link <?php if($title==='dashboard') echo 'active'; ?>">
+              <a href="index.php?page=dashboard&title=dashboard" class="nav-link <?php if ($title === 'dashboard') echo 'active'; ?>">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
                   Dashboard
@@ -87,7 +87,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="index.php?page=siswa&title=siswa" class="nav-link <?php if($title==='siswa') echo 'active'; ?>">
+              <a href="index.php?page=siswa&title=siswa" class="nav-link <?php if ($title === 'siswa') echo 'active'; ?>">
                 <i class="nav-icon fas fa-users"></i>
                 <p>
                   Siswa
@@ -95,7 +95,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="index.php?page=pegawai&title=pegawai" class="nav-link <?php if ($title === 'pegawai') echo 'active'; ?>">
                 <i class="nav-icon fas fa-user-secret"></i>
                 <p>
                   Pegawai
@@ -130,14 +130,19 @@
             include "view/dashboard.php";
           } elseif ($_GET['page'] == 'siswa') {
             include "view/siswa/index.php";
-          }elseif($_GET['page'] == 'siswa_create') {
+          } elseif ($_GET['page'] == 'siswa_create') {
             include "view/siswa/create.php";
-          }elseif($_GET['page']=='siswa_detail'){
+          } elseif ($_GET['page'] == 'siswa_detail') {
             include "view/siswa/detail.php";
-          }elseif($_GET['page']=='siswa_edit'){
+          } elseif ($_GET['page'] == 'siswa_edit') {
             include "view/siswa/edit.php";
+          } elseif ($_GET['page'] == 'pegawai_detail') {
+            include "view/pegawai/editdetail.php";
+          } elseif ($_GET['page'] == 'pegawai') {
+            include "view/pegawai/index.php";
+          }elseif ($_GET['page'] == 'pegawai_create') {
+            include "view/pegawai/create.php";
           }
-
         } else {
           include "view/dashboard.php";
         }
@@ -168,39 +173,41 @@
   <!-- Bootstrap 4 -->
   <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- DataTables  & Plugins -->
-<script src="plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-<script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-<script src="plugins/jszip/jszip.min.js"></script>
-<script src="plugins/pdfmake/pdfmake.min.js"></script>
-<script src="plugins/pdfmake/vfs_fonts.js"></script>
-<script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-<script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
-<script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+  <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+  <script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+  <script src="plugins/jszip/jszip.min.js"></script>
+  <script src="plugins/pdfmake/pdfmake.min.js"></script>
+  <script src="plugins/pdfmake/vfs_fonts.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+  <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
   <!-- AdminLTE App -->
   <script src="dist/js/adminlte.min.js"></script>
 
 
   <script>
-  $(function () {
-    $("#example1").DataTable({
-      "responsive": true, "lengthChange": false, "autoWidth": false,
-      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "responsive": true,
+    $(function() {
+      $("#example1").DataTable({
+        "responsive": true,
+        "lengthChange": false,
+        "autoWidth": false,
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "responsive": true,
+      });
     });
-  });
-</script>
+  </script>
 </body>
 
 </html>
