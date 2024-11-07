@@ -22,10 +22,11 @@ if($aksi=="create"){
     $update=mysqli_query($koneksi,$query);
  
 
-}elseif($aksi=='hapus'){
-    $nisn=$_GET['nisn'];
-
-    $query="DELETE FROM siswa WHERE nisn='$nisn'";
-    mysqli_query($koneksi,$query);
 }
+// elseif($aksi=='hapus'){
+//     $nisn=$_GET['nisn'];
+
+//     $query="DELETE FROM siswa WHERE nisn='$nisn'";
+//     mysqli_query($koneksi,$query);
+// }
 header("location:../index.php?title=siswa&page=siswa");

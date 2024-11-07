@@ -27,4 +27,10 @@ elseif($aksi=="edit"){
  
 
 }
+// elseif($aksi=='hapus'){
+//     $id=$_GET['id'];
+
+//     $query="DELETE FROM pegawai WHERE id='$id'";
+//     mysqli_query($koneksi,$query);
+// }
 header("location:../index.php?title=pegawai&page=pegawai");

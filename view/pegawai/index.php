@@ -46,7 +46,7 @@
 
                                      <a href='index.php?title=pegawai&page=pegawai_edit&id=$data[id]' class='btn btn-outline-success btn-sm'><i class='fas fa-edit'></i> Edit</a>
                                      
-                                     <a href='db/db_pegawai.php?action=hapus&id=$data[id]' class='btn btn-danger btn-sm'><i class='far fa-trash-alt'></i> Hapus</a>
+                      
                             </td>
                     </tr>";
                     $no++;

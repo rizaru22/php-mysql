@@ -48,7 +48,7 @@
 
                                      <a href='index.php?title=siswa&page=siswa_edit&nisn=$data[nisn]' class='btn btn-outline-success btn-sm'><i class='fas fa-edit'></i> Edit</a>
                                      
-                                     <a href='db/db_siswa.php?action=hapus&nisn=$data[nisn]' class='btn btn-danger btn-sm'><i class='far fa-trash-alt'></i> Hapus</a>
+                            
                             </td>
                     </tr>";
                     $no++;
