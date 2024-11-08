@@ -1,4 +1,9 @@
 <?php
+session_start();
+if(!$_SESSION['login_status']){
+  header("location:login.php");
+}
+
 if (isset($_GET['title'])) {
   $title = $_GET['title'];
 } else {
@@ -213,3 +218,4 @@ if (isset($_GET['title'])) {
 </body>
 
 </html>
+  }
