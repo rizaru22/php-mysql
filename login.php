@@ -26,7 +26,13 @@
             <div class="card-body">
                 <p class="login-box-msg">Silahkan Login Untuk Menggunakan Aplikasi</p>
                 <?php
-                    echo $_GET['pesan'];
+                    if (isset($_GET['pesan'])=='Gagal'){
+                        echo '<div class="alert alert-danger alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <h5><i class="icon fas fa-ban"></i> Failed!</h5>
+                        Username atau Password anda salah!!!
+                      </div>';
+                    }
                 ?>
                 <form action="proses_login.php" method="post">
                     <div class="input-group mb-3">
