@@ -72,7 +72,7 @@ if (isset($_GET['title'])) {
             <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="#" class="d-block">Safrizal</a>
+            <a href="#" class="d-block"><?=$_SESSION['nama'] ?></a>
           </div>
         </div>
 
