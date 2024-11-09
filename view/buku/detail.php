@@ -1,7 +1,7 @@
       <?php
         include "db/koneksi.php";
-        $nisn = $_GET['nisn'];
-        $query = "SELECT * FROM siswa WHERE nisn='$nisn'";
+        $nobuku= $_GET['nobuku'];
+        $query = "SELECT * FROM buku WHERE nobuku='$nobuku'";
         $find_one = mysqli_query($koneksi, $query);
         $data = mysqli_fetch_assoc($find_one);
 

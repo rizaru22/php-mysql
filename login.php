@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Log in (v2)</title>
-
+    <title>Login SIM Lib</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
@@ -21,7 +21,10 @@
         <!-- /.login-logo -->
         <div class="card card-outline card-success">
             <div class="card-header text-center">
-                <p class="h1"><strong>SIM</strong>Lib</p>
+                <h3>
+                <img src="img/apple-touch-icon.png" style="width: 40px;">
+                SIM<span style="color:chartreuse;">Lib</span>
+                </h3>
             </div>
             <div class="card-body">
                 <p class="login-box-msg">Silahkan Login Untuk Menggunakan Aplikasi</p>
