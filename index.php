@@ -114,7 +114,7 @@ if (isset($_GET['title'])) {
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="index.php?page=buku&title=buku" class="nav-link <?php if ($title === 'buku') echo 'active'; ?>">
                 <i class="nav-icon fas fa-book-open"></i>
                 <p>
                   Buku
@@ -155,6 +155,10 @@ if (isset($_GET['title'])) {
             include "view/pegawai/index.php";
           }elseif ($_GET['page'] == 'pegawai_create') {
             include "view/pegawai/create.php";
+          }elseif ($_GET['page'] == 'buku_create') {
+            include "view/buku/create.php";
+          }elseif ($_GET['page'] == 'buku') {
+            include "view/buku/index.php";
           }
         } else {
           include "view/dashboard.php";
@@ -224,4 +228,3 @@ if (isset($_GET['title'])) {
 </body>
 
 </html>
-  }
