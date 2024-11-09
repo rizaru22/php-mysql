@@ -47,6 +47,12 @@ if (isset($_GET['title'])) {
 
 
         <li class="nav-item">
+          <a class="btn btn-outline-danger btn-sm" href="logout.php" role="button">
+            <i class="fas fa-power-off"></i> Logout
+          </a>
+        </li>
+
+        <li class="nav-item">
           <a class="nav-link" data-widget="fullscreen" href="#" role="button">
             <i class="fas fa-expand-arrows-alt"></i>
           </a>
@@ -61,7 +67,7 @@ if (isset($_GET['title'])) {
       <!-- Brand Logo -->
       <a href="index3.html" class="brand-link">
         <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">AdminLTE 3</span>
+        <span class="brand-text font-weight-light">SIMLib</span>
       </a>
 
       <!-- Sidebar -->
